@@ -49,3 +49,31 @@ norm:
 re:fclean all
 
 .PHONY : re fclean clean all ffclean norm
+
+
+/*
+
+NAME = libftprintf.a
+FLAG = -Wall -Wextra -Werror
+LIBFTPRİNTF = ft_printf
+
+all: $(NAME)
+		gcc $(FLAG) server.c $(NAME) -o server
+		gcc $(FLAG)client.c $(NAME) -o client
+$(NAME): $(LIBFTPRİNTF)
+		make -C $(LIBFTPRİNTF)
+		cp ft_printf/libftprintf.a .
+clean:
+		make clean -C $(LIBFTPRİNTF)
+		rm -rf server.o client.o
+		rm -rf server client
+fclean: clean
+		make fclean -C $(LIBFTPRİNTF)
+		rm -rf $(NAME)
+		rm -rf server client
+
+re: fclean all
+
+.PHONY: clean fclean re
+
+*/
