@@ -59,7 +59,7 @@ LIBFTPRİNTF = ft_printf
 
 all: $(NAME)
 		gcc $(FLAG) server.c $(NAME) -o server
-		gcc $(FLAG)client.c $(NAME) -o client
+		gcc $(FLAG) client.c $(NAME) -o client
 $(NAME): $(LIBFTPRİNTF)
 		make -C $(LIBFTPRİNTF)
 		cp ft_printf/libftprintf.a .
