@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mumutlu <mumutlu@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/27 15:18:05 by mumutlu           #+#    #+#             */
-/*   Updated: 2023/05/27 15:18:09 by mumutlu          ###   ########.fr       */
+/*   Created: 2023/05/27 15:17:59 by mumutlu           #+#    #+#             */
+/*   Updated: 2023/05/27 15:18:01 by mumutlu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	sig_usr(int sig)
 {
-	static char	str = 0;
-	static int	get_byte = 0;
+	static unsigned char	str = 0;
+	static int				get_byte = 0;
 
 	if (sig == SIGUSR1)
 		str = str | 1;
